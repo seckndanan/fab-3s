@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5tdqpcee*g(qkt2r8)=8p@%84l6iq345#yn)ka38=_f(hc=bw^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','fab-3s.herokuapp.com']
 
@@ -81,11 +81,14 @@ WSGI_APPLICATION = 'FAB3S.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd894f74dckl476',
+        'HOST': 'ec2-54-159-35-35.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'ksdklpacqgqevg',
+        'PASSWORK': 'f267c921d1d1905f3102ffd76748b2078b3f9caeac35c3fbfbac47001749053',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
